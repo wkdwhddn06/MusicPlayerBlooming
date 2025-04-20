@@ -118,7 +118,6 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search),
         binding.toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
         }
-        binding.voiceSearch.setOnClickListener(this)
         binding.clearText.setOnClickListener(this)
         binding.chipGroup.setOnCheckedStateChangeListener(this@SearchFragment)
         binding.searchView.reactionToKey(KeyEvent.KEYCODE_ENTER) {
@@ -174,7 +173,6 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search),
 
     override fun onClick(view: View) {
         when (view) {
-            binding.voiceSearch -> startVoiceSearch()
             binding.clearText -> binding.searchView.text?.clear()
         }
     }
@@ -253,7 +251,6 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search),
     private fun search(query: String?) {
         if (query == null) return
         TransitionManager.beginDelayedTransition(binding.appBar)
-        binding.voiceSearch.isGone = query.isNotEmpty()
         binding.clearText.isVisible = query.isNotEmpty()
         job?.cancel()
         job = viewModel.submit(query)

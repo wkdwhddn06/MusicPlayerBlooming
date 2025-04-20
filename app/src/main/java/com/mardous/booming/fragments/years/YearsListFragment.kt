@@ -103,7 +103,6 @@ class YearsListFragment : AbsRecyclerViewCustomGridSizeFragment<YearAdapter, Gri
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
-        menu.removeItem(R.id.action_view_type)
         val sortOrderSubmenu = menu.findItem(R.id.action_sort_order)?.subMenu
         if (sortOrderSubmenu != null) {
             sortOrderSubmenu.clear()

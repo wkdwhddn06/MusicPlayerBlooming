@@ -77,7 +77,6 @@ class PlaylistAdapter(
         val playlist = dataSet[position]
         val isChecked = isChecked(playlist)
         holder.itemView.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = playlist.playlistEntity.playlistName
         if (holder.text != null) {
             holder.text.text = playlist.songCount.songsStr(activity)
@@ -129,14 +128,6 @@ class PlaylistAdapter(
         init {
             if (itemLayoutRes == R.layout.item_list)
                 image?.useAsIcon()
-
-            menu?.setOnClickListener(object : OnClickMenu() {
-                override val popupMenuRes: Int
-                    get() = R.menu.menu_item_playlist
-
-                override fun onMenuItemClick(item: MenuItem): Boolean =
-                    callback?.playlistMenuItemClick(playlist, item) ?: false
-            })
         }
 
         private val playlist: PlaylistWithSongs

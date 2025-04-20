@@ -70,7 +70,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/menu"
                 style="@style/MenuButtonStyle"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
 
         </LinearLayout>
 

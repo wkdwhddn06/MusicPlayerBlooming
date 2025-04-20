@@ -60,6 +60,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/menu"
         style="@style/MenuButtonStyle"
+        android:visibility="gone"
         android:layout_gravity="center_vertical"/>
 
 </LinearLayout>

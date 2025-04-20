@@ -74,7 +74,6 @@ class PlayingQueueSongAdapter(
         holder.text?.alpha = alpha
         holder.paletteColorContainer?.alpha = alpha
         holder.dragView?.alpha = alpha
-        holder.menu?.alpha = alpha
     }
 
     override fun getPopupText(view: View, position: Int): CharSequence {

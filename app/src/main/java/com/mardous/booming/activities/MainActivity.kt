@@ -61,7 +61,7 @@ class MainActivity : AbsSlidingMusicPanelActivity() {
         setupNavigationController()
 
         // Set up dynamic shortcuts
-        DynamicShortcutManager(this).initDynamicShortcuts()
+        //DynamicShortcutManager(this).initDynamicShortcuts()
 
         libraryViewModel.getUpdateSearchEvent().observe(this) { result ->
             result.getContentIfNotConsumed()?.let {

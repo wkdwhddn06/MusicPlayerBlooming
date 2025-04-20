@@ -76,7 +76,6 @@ open class ArtistAdapter(
         val artist: Artist = dataSet[position]
         val isChecked = isChecked(artist)
         holder.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = getArtistTitle(artist)
         holder.text?.text = getArtistText(artist)
         val transitionName = if (albumArtistsOnly) artist.name else artist.id.toString()
@@ -164,18 +163,8 @@ open class ArtistAdapter(
         }
 
         override fun onLongClick(view: View): Boolean {
-            return isValidPosition && toggleChecked(layoutPosition)
-        }
-
-        init {
-            menu?.setOnClickListener(object : OnClickMenu() {
-                override val popupMenuRes: Int
-                    get() = R.menu.menu_item_artist
-
-                override fun onMenuItemClick(item: MenuItem): Boolean {
-                    return onArtistMenuItemClick(item)
-                }
-            })
+            //return isValidPosition && toggleChecked(layoutPosition)
+            return false
         }
     }
 

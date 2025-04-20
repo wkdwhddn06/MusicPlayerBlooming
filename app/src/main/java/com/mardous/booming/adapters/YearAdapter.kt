@@ -70,7 +70,6 @@ class YearAdapter(
         val year = dataSet[position]
         val isChecked = isChecked(year)
         holder.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = year.name
         if (itemLayoutRes == R.layout.item_grid_gradient) {
             holder.text?.text = year.songCount.toString()
@@ -143,18 +142,7 @@ class YearAdapter(
             // We could create a new menu for this, but I prefer to reuse the
             // Artist model menu, which includes the basic elements needed for
             // this case. We just need to remove the action_tag_editor item.
-            menu?.setOnClickListener(object : OnClickMenu() {
-                override val popupMenuRes: Int
-                    get() = R.menu.menu_item_artist
 
-                override fun onPreparePopup(menu: Menu) {
-                    menu.removeItem(R.id.action_tag_editor)
-                }
-
-                override fun onMenuItemClick(item: MenuItem): Boolean {
-                    return callback?.yearMenuItemClick(currentYear, item) ?: false
-                }
-            })
         }
     }
 }

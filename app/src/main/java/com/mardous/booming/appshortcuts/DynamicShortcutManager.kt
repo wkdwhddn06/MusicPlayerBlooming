@@ -32,11 +32,7 @@ class DynamicShortcutManager(private val context: Context) {
     private val shortcutManager: ShortcutManager? = context.getSystemService()
 
     private val defaultShortcuts: List<ShortcutInfo>
-        get() = listOf(
-            ShuffleAllShortcutType(context).shortcutInfo,
-            TopTracksShortcutType(context).shortcutInfo,
-            LastAddedShortcutType(context).shortcutInfo
-        )
+        get() = listOf()
 
     fun initDynamicShortcuts() {
         if (shortcutManager == null)

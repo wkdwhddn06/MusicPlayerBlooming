@@ -149,30 +149,30 @@ abstract class AbsPlayerFragment(@LayoutRes layoutRes: Int) :
                 true
             }
 
-            R.id.action_show_lyrics -> {
-                onQuickActionEvent(NowPlayingAction.Lyrics)
-                true
-            }
+//            R.id.action_show_lyrics -> {
+//                onQuickActionEvent(NowPlayingAction.Lyrics)
+//                true
+//            }
 
             R.id.action_sound_settings -> {
                 onQuickActionEvent(NowPlayingAction.SoundSettings)
                 true
             }
 
-            R.id.action_sleep_timer -> {
-                onQuickActionEvent(NowPlayingAction.SleepTimer)
-                true
-            }
+//            R.id.action_sleep_timer -> {
+//                onQuickActionEvent(NowPlayingAction.SleepTimer)
+//                true
+//            }
 
             R.id.action_tag_editor -> {
                 onQuickActionEvent(NowPlayingAction.TagEditor)
                 true
             }
 
-            R.id.action_web_search -> {
-                onQuickActionEvent(NowPlayingAction.WebSearch)
-                true
-            }
+//            R.id.action_web_search -> {
+//                onQuickActionEvent(NowPlayingAction.WebSearch)
+//                true
+//            }
 
             R.id.action_go_to_album -> {
                 onQuickActionEvent(NowPlayingAction.OpenAlbum)
@@ -191,16 +191,16 @@ abstract class AbsPlayerFragment(@LayoutRes layoutRes: Int) :
                 true
             }
 
-            R.id.action_share_now_playing -> {
-                ShareSongDialog.create(MusicPlayer.currentSong)
-                    .show(childFragmentManager, "SHARE_SONG")
-                true
-            }
-
-            R.id.action_equalizer -> {
-                goToDestination(requireActivity(), R.id.nav_equalizer)
-                true
-            }
+//            R.id.action_share_now_playing -> {
+//                ShareSongDialog.create(MusicPlayer.currentSong)
+//                    .show(childFragmentManager, "SHARE_SONG")
+//                true
+//            }
+//
+//            R.id.action_equalizer -> {
+//                goToDestination(requireActivity(), R.id.nav_equalizer)
+//                true
+//            }
 
             else -> currentSong.onSongMenu(this, menuItem)
         }
@@ -219,16 +219,16 @@ abstract class AbsPlayerFragment(@LayoutRes layoutRes: Int) :
     }
 
     override fun onLyricsVisibilityChange(animatorSet: AnimatorSet, lyricsVisible: Boolean) {
-        val lyricsItem = playerToolbar?.menu?.findItem(R.id.action_show_lyrics)
-        if (lyricsItem != null) {
-            if (lyricsVisible) {
-                lyricsItem.setIcon(R.drawable.ic_lyrics_24dp)
-                    .setTitle(R.string.action_hide_lyrics)
-            } else {
-                lyricsItem.setIcon(R.drawable.ic_lyrics_outline_24dp)
-                    .setTitle(R.string.action_show_lyrics)
-            }
-        }
+//        val lyricsItem = playerToolbar?.menu?.findItem(R.id.action_show_lyrics)
+//        if (lyricsItem != null) {
+//            if (lyricsVisible) {
+//                lyricsItem.setIcon(R.drawable.ic_lyrics_24dp)
+//                    .setTitle(R.string.action_hide_lyrics)
+//            } else {
+//                lyricsItem.setIcon(R.drawable.ic_lyrics_outline_24dp)
+//                    .setTitle(R.string.action_show_lyrics)
+//            }
+//        }
     }
 
     protected open fun onSongInfoChanged(song: Song) {

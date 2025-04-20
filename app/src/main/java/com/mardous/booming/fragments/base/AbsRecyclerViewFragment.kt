@@ -50,7 +50,6 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
     protected var layoutManager: LM? = null
 
     val toolbar: Toolbar get() = binding.appBarLayout.toolbar
-    val shuffleButton: FloatingActionButton get() = binding.shuffleButton
 
     abstract val isShuffleVisible: Boolean
     abstract val titleRes: Int
@@ -71,38 +70,6 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
         checkForMargins()
         setUpRecyclerView()
         setupToolbar()
-
-        // Add listeners when shuffle is visible
-        if (isShuffleVisible) {
-            binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                    super.onScrolled(recyclerView, dx, dy)
-                    if (dy > 0) {
-                        binding.shuffleButton.hide()
-                    } else if (dy < 0) {
-                        binding.shuffleButton.show()
-                    }
-
-                }
-            })
-            binding.shuffleButton.apply {
-                setOnClickListener {
-                    onShuffleClicked()
-                }
-            }
-        } else {
-            binding.shuffleButton.isVisible = false
-        }
-
-        libraryViewModel.getFabMargin().observe(viewLifecycleOwner) {
-            binding.shuffleButton.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                bottomMargin = it
-            }
-        }
-    }
-
-    open fun onShuffleClicked() {
-        shuffleButton.shake()
     }
 
     private fun setupToolbar() {
@@ -183,15 +150,9 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
     }
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_library, menu)
     }
 
     override fun onMenuItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_settings -> findNavController().navigate(R.id.nav_settings, null, navOptions)
-            R.id.action_import_playlist -> ImportPlaylistDialog().show(childFragmentManager, "IMPORT_PLAYLIST")
-            R.id.action_add_to_playlist -> CreatePlaylistDialog.create().show(childFragmentManager, "CREATE_PLAYLIST")
-        }
         return false
     }
 

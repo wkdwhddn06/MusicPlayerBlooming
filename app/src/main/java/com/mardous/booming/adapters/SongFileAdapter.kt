@@ -71,7 +71,6 @@ class SongFileAdapter(
         val file = dataSet[index]
         val isChecked = isChecked(file)
         holder.itemView.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = getFileTitle(file)
         if (holder.text != null) {
             if (holder.itemViewType == FILE) {
@@ -134,18 +133,6 @@ class SongFileAdapter(
     }
 
     inner class ViewHolder(itemView: View) : MediaEntryViewHolder(itemView) {
-
-        init {
-            if (menu != null && callbacks != null) {
-                menu.setOnClickListener { v ->
-                    val position = layoutPosition
-                    if (isPositionInRange(position)) {
-                        callbacks.fileMenuClick(dataSet[position], v)
-                    }
-                }
-            }
-        }
-
         override fun onClick(v: View?) {
             val position = layoutPosition
             if (isPositionInRange(position)) {

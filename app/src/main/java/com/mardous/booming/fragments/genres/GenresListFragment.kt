@@ -82,16 +82,6 @@ class GenresListFragment : AbsRecyclerViewCustomGridSizeFragment<GenreAdapter, G
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
-        menu.removeItem(R.id.action_view_type)
-        val sortOrderSubmenu = menu.findItem(R.id.action_sort_order)?.subMenu
-        if (sortOrderSubmenu != null) {
-            sortOrderSubmenu.clear()
-            sortOrderSubmenu.add(0, R.id.action_sort_order_az, 0, R.string.sort_order_az)
-            sortOrderSubmenu.add(0, R.id.action_sort_order_number_of_songs, 1, R.string.sort_order_number_of_songs)
-            sortOrderSubmenu.add(1, R.id.action_sort_order_descending, 3, R.string.sort_order_descending)
-            sortOrderSubmenu.setGroupCheckable(0, true, true)
-            sortOrderSubmenu.prepareSortOrder(SortOrder.genreSortOrder)
-        }
     }
 
     override fun onMenuItemSelected(item: MenuItem): Boolean {

@@ -196,6 +196,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:background="?selectableItemBackground"
+        android:visibility="gone"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

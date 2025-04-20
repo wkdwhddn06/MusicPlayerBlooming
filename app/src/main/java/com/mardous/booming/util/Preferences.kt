@@ -106,7 +106,13 @@ object Preferences : KoinComponent {
 
     fun getDefaultLibraryCategoryInfos() =
         CategoryInfo.Category.entries.mapIndexed { index, category ->
-            CategoryInfo(category, index < CategoryInfo.MAX_VISIBLE_CATEGORIES)
+            val included = listOf(
+                CategoryInfo.Category.Songs,
+                CategoryInfo.Category.Albums,
+                CategoryInfo.Category.Artists,
+            )
+            val isVisible = included.contains(category)
+            CategoryInfo(category, isVisible)
         }
 
     val isRememberLastPage: Boolean

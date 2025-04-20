@@ -61,13 +61,6 @@ class AlbumListFragment : AbsRecyclerViewCustomGridSizeFragment<AlbumAdapter, Gr
         }
     }
 
-    override fun onShuffleClicked() {
-        super.onShuffleClicked()
-        lifecycleScope.launch(Dispatchers.IO) {
-            MusicPlayer.openQueue(ShuffleHelper.shuffleAlbums(adapter?.dataSet), keepShuffleMode = false)
-        }
-    }
-
     override fun onResume() {
         super.onResume()
         libraryViewModel.forceReload(ReloadType.Albums)
@@ -142,17 +135,17 @@ class AlbumListFragment : AbsRecyclerViewCustomGridSizeFragment<AlbumAdapter, Gr
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
-        val sortOrderSubmenu = menu.findItem(R.id.action_sort_order)?.subMenu
-        if (sortOrderSubmenu != null) {
-            sortOrderSubmenu.clear()
-            sortOrderSubmenu.add(0, R.id.action_sort_order_az, 0, R.string.sort_order_az)
-            sortOrderSubmenu.add(0, R.id.action_sort_order_artist, 1, R.string.sort_order_artist)
-            sortOrderSubmenu.add(0, R.id.action_sort_order_year, 2, R.string.sort_order_year)
-            sortOrderSubmenu.add(0, R.id.action_sort_order_number_of_songs, 3, R.string.sort_order_number_of_songs)
-            sortOrderSubmenu.add(1, R.id.action_sort_order_descending, 5, R.string.sort_order_descending)
-            sortOrderSubmenu.setGroupCheckable(0, true, true)
-            sortOrderSubmenu.prepareSortOrder(SortOrder.albumSortOrder)
-        }
+//        val sortOrderSubmenu = menu.findItem(R.id.action_sort_order)?.subMenu
+//        if (sortOrderSubmenu != null) {
+//            sortOrderSubmenu.clear()
+//            sortOrderSubmenu.add(0, R.id.action_sort_order_az, 0, R.string.sort_order_az)
+//            sortOrderSubmenu.add(0, R.id.action_sort_order_artist, 1, R.string.sort_order_artist)
+//            sortOrderSubmenu.add(0, R.id.action_sort_order_year, 2, R.string.sort_order_year)
+//            sortOrderSubmenu.add(0, R.id.action_sort_order_number_of_songs, 3, R.string.sort_order_number_of_songs)
+//            sortOrderSubmenu.add(1, R.id.action_sort_order_descending, 5, R.string.sort_order_descending)
+//            sortOrderSubmenu.setGroupCheckable(0, true, true)
+//            sortOrderSubmenu.prepareSortOrder(SortOrder.albumSortOrder)
+//        }
     }
 
     override fun onMenuItemSelected(item: MenuItem): Boolean {

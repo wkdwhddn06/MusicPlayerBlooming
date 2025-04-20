@@ -105,21 +105,9 @@ class PlaylistListFragment : AbsRecyclerViewCustomGridSizeFragment<PlaylistAdapt
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateMenu(menu, inflater)
-        menu.removeItem(R.id.action_view_type)
-        menu.add(0, R.id.action_new_playlist, 0, R.string.new_playlist_title)
-        menu.add(0, R.id.action_import_playlist, 0, R.string.action_import_playlist)
-        menu.findItem(R.id.action_settings).setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
     }
 
     override fun onMenuItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_new_playlist) {
-            CreatePlaylistDialog.create()
-                .show(childFragmentManager, "NEW_PLAYLIST")
-            return true
-        } else if (item.itemId == R.id.action_import_playlist) {
-            ImportPlaylistDialog().show(childFragmentManager, "IMPORT_PLAYLIST")
-            return true
-        }
         return super.onMenuItemSelected(item)
     }
 

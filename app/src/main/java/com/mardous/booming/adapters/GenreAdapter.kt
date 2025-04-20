@@ -135,7 +135,6 @@ class GenreAdapter(
             if (itemLayoutRes == R.layout.item_list) {
                 image?.useAsIcon()
             }
-            menu?.hide()
         }
     }
 }

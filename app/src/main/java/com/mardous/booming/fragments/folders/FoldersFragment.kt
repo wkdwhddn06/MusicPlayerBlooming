@@ -288,15 +288,7 @@ class FoldersFragment : AbsMainActivityFragment(R.layout.fragment_folders), Sele
     }
 
     override fun onCreateMenu(menu: Menu, inflater: MenuInflater) {
-        menu.add(0, R.id.action_scan, 0, R.string.scan_media)
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
-        menu.add(0, R.id.action_go_to_start_directory, 1, R.string.action_go_to_start_directory)
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
-        menu.add(0, R.id.action_settings, 2, R.string.settings_title)
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
-        menu.removeItem(R.id.action_grid_size)
-        menu.removeItem(R.id.action_view_type)
-        menu.removeItem(R.id.action_sort_order)
+
     }
 
     override fun onMenuItemSelected(item: MenuItem): Boolean {
@@ -313,11 +305,6 @@ class FoldersFragment : AbsMainActivityFragment(R.layout.fragment_folders), Sele
                         listPaths(crumb.file, AUDIO_FILE_FILTER) { paths -> scanPaths(paths) }
                     }
                 }
-                return true
-            }
-
-            R.id.action_settings -> {
-                findNavController().navigate(R.id.nav_settings, null, navOptions)
                 return true
             }
         }

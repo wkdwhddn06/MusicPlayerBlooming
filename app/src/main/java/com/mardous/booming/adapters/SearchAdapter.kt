@@ -144,10 +144,7 @@ class SearchAdapter(
         }
 
         override fun onLongClick(view: View): Boolean {
-            return menu?.let {
-                it.callOnClick()
-                true
-            } ?: false
+            return false
         }
 
         private val menuRes = when (itemViewType) {
@@ -160,28 +157,6 @@ class SearchAdapter(
 
         init {
             itemView.setOnLongClickListener(null)
-
-            menu?.apply {
-                visibility = if (menuRes != 0) {
-                    setOnClickListener(object : OnClickMenu() {
-                        override val popupMenuRes: Int
-                            get() = menuRes
-
-                        override fun onMenuItemClick(item: MenuItem): Boolean {
-                            when (val data = dataSet[layoutPosition]) {
-                                is Song -> return callback?.songMenuItemClick(data, item) ?: false
-                                is Album -> return callback?.albumMenuItemClick(data, item, sharedElements) ?: false
-                                is Artist -> return callback?.artistMenuItemClick(data, item, sharedElements) ?: false
-                                is PlaylistWithSongs -> return callback?.playlistMenuItemClick(data, item) ?: false
-                            }
-                            return false
-                        }
-                    })
-                    View.VISIBLE
-                } else {
-                    View.GONE
-                }
-            }
 
             if (itemViewType != ALBUM && itemViewType != ARTIST) {
                 image?.isVisible = false

@@ -52,6 +52,7 @@
             android:name=".activities.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Booming.SplashScreen"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -145,22 +146,25 @@
 
         <activity
             android:label="@string/action_tag_editor"
+            android:screenOrientation="portrait"
             android:name=".activities.tageditor.SongTagEditorActivity"/>
 
         <activity
             android:label="@string/action_tag_editor"
+            android:screenOrientation="portrait"
             android:name=".activities.tageditor.AlbumTagEditorActivity"/>
 
         <activity
             android:label="@string/action_tag_editor"
+            android:screenOrientation="portrait"
             android:name=".activities.tageditor.ArtistTagEditorActivity"/>
 
         <activity android:name=".activities.PermissionsActivity"/>
 
-        <activity
-            android:name=".appshortcuts.AppShortcutLauncherActivity"
-            android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+<!--        <activity-->
+<!--            android:name=".appshortcuts.AppShortcutLauncherActivity"-->
+<!--            android:launchMode="singleInstance"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>-->
 
         <activity
             android:name=".activities.ErrorActivity"
@@ -190,42 +194,42 @@
         </receiver>
 
         <!-- Widgets -->
-        <receiver
-            android:name=".appwidgets.AppWidgetBig"
-            android:exported="false"
-            android:label="@string/app_widget_big_name">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-            </intent-filter>
+<!--        <receiver-->
+<!--            android:name=".appwidgets.AppWidgetBig"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/app_widget_big_name">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>-->
+<!--            </intent-filter>-->
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_big_info"/>
-        </receiver>
-        <receiver
-            android:name=".appwidgets.AppWidgetSimple"
-            android:exported="false"
-            android:label="@string/app_widget_simple_name">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-            </intent-filter>
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/app_widget_big_info"/>-->
+<!--        </receiver>-->
+<!--        <receiver-->
+<!--            android:name=".appwidgets.AppWidgetSimple"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/app_widget_simple_name">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>-->
+<!--            </intent-filter>-->
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_simple_info"/>
-        </receiver>
-        <receiver
-            android:name=".appwidgets.AppWidgetSmall"
-            android:exported="false"
-            android:label="@string/app_widget_small_name">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-            </intent-filter>
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/app_widget_simple_info"/>-->
+<!--        </receiver>-->
+<!--        <receiver-->
+<!--            android:name=".appwidgets.AppWidgetSmall"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/app_widget_small_name">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>-->
+<!--            </intent-filter>-->
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_small_info"/>
-        </receiver>
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/app_widget_small_info"/>-->
+<!--        </receiver>-->
 
         <provider
             android:name="androidx.core.content.FileProvider"

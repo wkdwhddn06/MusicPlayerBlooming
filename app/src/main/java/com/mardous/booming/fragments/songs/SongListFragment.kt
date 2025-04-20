@@ -60,14 +60,6 @@ class SongListFragment : AbsRecyclerViewCustomGridSizeFragment<SongAdapter, Grid
         }
     }
 
-    override fun onShuffleClicked() {
-        super.onShuffleClicked()
-        val songs = adapter?.dataSet
-        if (!songs.isNullOrEmpty()) {
-            MusicPlayer.openQueueShuffle(songs)
-        }
-    }
-
     override fun onResume() {
         super.onResume()
         libraryViewModel.forceReload(ReloadType.Songs)

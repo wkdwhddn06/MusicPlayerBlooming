@@ -82,7 +82,6 @@ open class SongAdapter(
         val song: Song = dataSet[position]
         val isChecked = isChecked(song)
         holder.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = getSongTitle(song)
         holder.text?.text = getSongText(song)
         // Check if imageContainer exists, so we can have a smooth transition without
@@ -194,22 +193,11 @@ open class SongAdapter(
         }
 
         override fun onLongClick(view: View): Boolean {
-            return isValidPosition && toggleChecked(layoutPosition)
+            return false
         }
 
         init {
-            menu?.setOnClickListener(object : OnClickMenu() {
-                override val popupMenuRes: Int
-                    get() = songMenuRes
 
-                override fun onPreparePopup(menu: Menu) {
-                    onPrepareSongMenu(menu)
-                }
-
-                override fun onMenuItemClick(item: MenuItem): Boolean {
-                    return onSongMenuItemClick(item)
-                }
-            })
         }
     }
 

@@ -37,8 +37,6 @@ public class MediaEntryViewHolder extends RecyclerView.ViewHolder implements Vie
     @Nullable
     public final ImageView image;
     @Nullable
-    public final MaterialButton menu;
-    @Nullable
     public final TextView imageText;
     @Nullable
     public final TextView title;
@@ -56,7 +54,6 @@ public class MediaEntryViewHolder extends RecyclerView.ViewHolder implements Vie
         this.imageContainer = itemView.findViewById(R.id.image_container);
         this.imageGradient = itemView.findViewById(R.id.image_gradient);
         this.image = itemView.findViewById(R.id.image);
-        this.menu = itemView.findViewById(R.id.menu);
         this.imageText = itemView.findViewById(R.id.image_text);
         this.title = itemView.findViewById(R.id.title);
         this.text = itemView.findViewById(R.id.text);

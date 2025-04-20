@@ -307,10 +307,10 @@ class AlbumDetailFragment : AbsMainActivityFragment(R.layout.fragment_album_deta
     }
 
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-        menuInflater.inflate(R.menu.menu_album_detail, menu)
-        if (!isLandscape()) {
-            menu.removeItem(R.id.action_search)
-        }
+//        menuInflater.inflate(R.menu.menu_album_detail, menu)
+//        if (!isLandscape()) {
+//            menu.removeItem(R.id.action_search)
+//        }
     }
 
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {

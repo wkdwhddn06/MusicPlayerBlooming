@@ -77,7 +77,6 @@ open class AlbumAdapter(
         val album: Album = dataSet[position]
         val isChecked = isChecked(album)
         holder.isActivated = isChecked
-        holder.menu?.isGone = isChecked
         holder.title?.text = getAlbumTitle(album)
         holder.text?.text = getAlbumText(album)
         // Check if imageContainer exists, so we can have a smooth transition without
@@ -166,19 +165,8 @@ open class AlbumAdapter(
         }
 
         override fun onLongClick(view: View): Boolean {
-            toggleChecked(layoutPosition)
-            return true
-        }
-
-        init {
-            menu?.setOnClickListener(object : OnClickMenu() {
-                override val popupMenuRes: Int
-                    get() = R.menu.menu_item_album
-
-                override fun onMenuItemClick(item: MenuItem): Boolean {
-                    return callback?.albumMenuItemClick(album, item, sharedElements) ?: false
-                }
-            })
+            //toggleChecked(layoutPosition)
+            return false
         }
     }
 

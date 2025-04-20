@@ -37,7 +37,6 @@ fun MediaEntryViewHolder.setColors(colors: MediaNotificationProcessor) {
     title?.setTextColor(colors.primaryTextColor)
     text?.setTextColor(colors.secondaryTextColor)
     imageText?.setTextColor(colors.secondaryTextColor)
-    menu?.iconTint = colors.secondaryTextColor.toColorStateList()
 }
 
 val RecyclerView.ViewHolder.isValidPosition: Boolean
