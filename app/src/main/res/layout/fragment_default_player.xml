@@ -10,7 +10,7 @@
     android:clickable="true"
     android:focusable="true">
 
-    <com.mardous.booming.views.WidthFitSquareLayout
+    <com.uniqtech.musicplayer.views.WidthFitSquareLayout
         android:id="@+id/albumCoverFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,16 +21,16 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/playerAlbumCoverFragment"
-            android:name="com.mardous.booming.fragments.player.base.PlayerAlbumCoverFragment"
+            android:name="com.uniqtech.musicplayer.fragments.player.base.PlayerAlbumCoverFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_album_cover_default"/>
 
-    </com.mardous.booming.views.WidthFitSquareLayout>
+    </com.uniqtech.musicplayer.views.WidthFitSquareLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/playbackControlsFragment"
-        android:name="com.mardous.booming.fragments.player.styles.defaultstyle.DefaultPlayerControlsFragment"
+        android:name="com.uniqtech.musicplayer.fragments.player.styles.defaultstyle.DefaultPlayerControlsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/albumCoverFragmentContainer"

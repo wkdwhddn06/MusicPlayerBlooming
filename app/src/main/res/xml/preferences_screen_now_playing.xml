@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.mardous.booming.preferences.dialog.NowPlayingScreenPreference
+    <com.uniqtech.musicplayer.preferences.dialog.NowPlayingScreenPreference
         app:icon="@drawable/ic_play_circle_24dp"
         app:title="@string/now_playing_screen_title"
         app:layout="@layout/list_item_view_no_title"
@@ -60,13 +60,13 @@
             app:layout="@layout/list_item_view"
             app:key="cover_swiping_effect" />
 
-        <com.mardous.booming.preferences.dialog.ActionOnCoverPreference
+        <com.uniqtech.musicplayer.preferences.dialog.ActionOnCoverPreference
             app:iconSpaceReserved="true"
             app:title="@string/double_tap_on_album_cover_title"
             app:layout="@layout/list_item_view"
             app:key="cover_double_tap_action" />
 
-        <com.mardous.booming.preferences.dialog.ActionOnCoverPreference
+        <com.uniqtech.musicplayer.preferences.dialog.ActionOnCoverPreference
             app:iconSpaceReserved="true"
             app:title="@string/long_press_on_album_cover_title"
             app:layout="@layout/list_item_view"
@@ -121,7 +121,7 @@
             app:layout="@layout/list_item_view_switch"
             app:key="display_extra_info" />
 
-        <com.mardous.booming.preferences.dialog.NowPlayingExtraInfoPreference
+        <com.uniqtech.musicplayer.preferences.dialog.NowPlayingExtraInfoPreference
             app:iconSpaceReserved="true"
             app:title="@string/select_extra_info_title"
             app:summary="@string/select_extra_info_summary"

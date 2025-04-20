@@ -99,7 +99,7 @@
         app:layout_constraintStart_toEndOf="@id/progressGuideline"
         tools:progress="20"/>
 
-    <com.mardous.booming.views.playback.RepeatButton
+    <com.uniqtech.musicplayer.views.playback.RepeatButton
         android:id="@+id/repeatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
         app:tint="?colorControlNormal"
         tools:ignore="MissingPrefix"/>
 
-    <com.mardous.booming.views.playback.ShuffleButton
+    <com.uniqtech.musicplayer.views.playback.ShuffleButton
         android:id="@+id/shuffleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

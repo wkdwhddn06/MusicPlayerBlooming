@@ -54,7 +54,7 @@
             app:layout_constraintTop_toBottomOf="@+id/visualizer_container"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <com.mardous.booming.views.AnimSlider
+        <com.uniqtech.musicplayer.views.AnimSlider
             android:id="@+id/volume_slider"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             app:layout_constraintTop_toBottomOf="@+id/left_balance_slider"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <com.mardous.booming.views.AnimSlider
+        <com.uniqtech.musicplayer.views.AnimSlider
             android:id="@+id/speed_slider"
             android:visibility="gone"
             android:layout_width="0dp"
@@ -120,7 +120,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="ContentDescription"/>
 
-        <com.mardous.booming.views.AnimSlider
+        <com.uniqtech.musicplayer.views.AnimSlider
             android:visibility="gone"
             android:id="@+id/pitch_slider"
             android:layout_width="0dp"

@@ -14,7 +14,7 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:navGraph="@navigation/graph_settings" />
 
-    <com.mardous.booming.views.TopAppBarLayout
+    <com.uniqtech.musicplayer.views.TopAppBarLayout
         android:id="@+id/appBarLayout"
         style="?appBarLayoutStyle"
         android:layout_width="match_parent"

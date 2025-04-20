@@ -17,21 +17,21 @@
         android:scrollbars="none"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
-    <com.mardous.booming.views.TopAppBarLayout
+    <com.uniqtech.musicplayer.views.TopAppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?appBarLayoutStyle"
         android:fitsSystemWindows="true">
 
-        <com.mardous.booming.views.BreadCrumbLayout
+        <com.uniqtech.musicplayer.views.BreadCrumbLayout
             android:id="@+id/breadCrumbs"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tab_height"
             android:paddingStart="60dp"
             android:paddingEnd="8dp"
             app:layout_collapseMode="pin"/>
-    </com.mardous.booming.views.TopAppBarLayout>
+    </com.uniqtech.musicplayer.views.TopAppBarLayout>
 
     <LinearLayout
         android:id="@android:id/empty"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.mardous.booming.views.AlbumCoverViewPager
+    <com.uniqtech.musicplayer.views.AlbumCoverViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,7 +46,7 @@
 
             </androidx.core.widget.NestedScrollView>
 
-            <com.mardous.booming.views.CoverLrcView
+            <com.uniqtech.musicplayer.views.CoverLrcView
                 android:id="@+id/synced_lyrics_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

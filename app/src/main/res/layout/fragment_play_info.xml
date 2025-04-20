@@ -90,21 +90,21 @@
                         android:layout_marginStart="@dimen/info_view_margin_horizontal"
                         android:layout_marginEnd="@dimen/info_view_margin_horizontal"/>
 
-                    <com.mardous.booming.views.InfoView
+                    <com.uniqtech.musicplayer.views.InfoView
                         android:id="@+id/playCount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:infoTitle="@string/played"
                         tools:infoText="@tools:sample/lorem"/>
 
-                    <com.mardous.booming.views.InfoView
+                    <com.uniqtech.musicplayer.views.InfoView
                         android:id="@+id/skipCount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:infoTitle="@string/skipped"
                         tools:infoText="@tools:sample/lorem"/>
 
-                    <com.mardous.booming.views.InfoView
+                    <com.uniqtech.musicplayer.views.InfoView
                         android:id="@+id/lastPlayDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

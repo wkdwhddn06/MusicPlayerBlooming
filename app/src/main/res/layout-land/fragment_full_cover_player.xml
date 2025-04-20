@@ -14,7 +14,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/playerAlbumCoverFragment"
-            android:name="com.mardous.booming.fragments.player.base.PlayerAlbumCoverFragment"
+            android:name="com.uniqtech.musicplayer.fragments.player.base.PlayerAlbumCoverFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_album_cover"/>
@@ -108,7 +108,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/playbackControlsFragment"
-            android:name="com.mardous.booming.fragments.player.styles.fullcoverstyle.FullCoverPlayerControlsFragment"
+            android:name="com.uniqtech.musicplayer.fragments.player.styles.fullcoverstyle.FullCoverPlayerControlsFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_full_cover_player_playback_controls"

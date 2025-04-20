@@ -50,7 +50,7 @@
         app:title="@string/exclusion_header"
         app:layout="@layout/preference_category_title">
 
-        <com.mardous.booming.preferences.SwitchWithButtonPreference
+        <com.uniqtech.musicplayer.preferences.SwitchWithButtonPreference
             app:iconSpaceReserved="true"
             app:title="@string/whitelist_title"
             app:summary="@string/whitelist_summary"
@@ -58,7 +58,7 @@
             app:layout="@layout/list_item_view_switch_alt"
             app:key="whitelist_enabled"/>
 
-        <com.mardous.booming.preferences.SwitchWithButtonPreference
+        <com.uniqtech.musicplayer.preferences.SwitchWithButtonPreference
             app:iconSpaceReserved="true"
             app:title="@string/blacklist_title"
             app:summary="@string/blacklist_summary"

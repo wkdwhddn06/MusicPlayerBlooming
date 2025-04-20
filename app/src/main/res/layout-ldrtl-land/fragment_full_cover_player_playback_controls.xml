@@ -145,7 +145,7 @@
         app:layout_constraintEnd_toStartOf="@+id/shuffle_button"
         tools:ignore="MissingPrefix"/>
 
-    <com.mardous.booming.views.playback.RepeatButton
+    <com.uniqtech.musicplayer.views.playback.RepeatButton
         android:id="@+id/repeat_button"
         android:layout_width="64dp"
         android:layout_height="64dp"
@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toStartOf="@+id/previous"
         tools:ignore="MissingPrefix"/>
 
-    <com.mardous.booming.views.playback.ShuffleButton
+    <com.uniqtech.musicplayer.views.playback.ShuffleButton
         android:id="@+id/shuffle_button"
         android:layout_width="64dp"
         android:layout_height="64dp"

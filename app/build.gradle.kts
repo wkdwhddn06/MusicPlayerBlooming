@@ -19,7 +19,7 @@ if (isNormalBuild) {
 
 android {
     compileSdk = 36
-    namespace = "com.mardous.booming"
+    namespace = "com.uniqtech.musicplayer"
 
     defaultConfig {
         minSdk = 26
@@ -91,7 +91,7 @@ android {
     applicationVariants.all {
         outputs.all {
             (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
-                "BoomingMusic-${defaultConfig.versionName}-${name}.apk"
+                "Music-${defaultConfig.versionName}-${name}.apk"
         }
     }
 }
